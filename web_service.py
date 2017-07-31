@@ -11,7 +11,7 @@ from tornado.options import define, options
 import requests
 import mem_data
 
-define("port", default=1025, help="run on the given port", type=int)
+define("port", default=1320, help="run on the given port", type=int)
 
 table=mem_data.Mem_table()
 table=table.mem_table
