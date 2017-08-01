@@ -19,7 +19,7 @@ var={}
 
 
 class IndexHandler(tornado.web.RequestHandler):
-    def get(self):
+    def post(self):
         parameter=self.get_argument("parameter")
         
         self.data='OK'
@@ -27,8 +27,6 @@ class IndexHandler(tornado.web.RequestHandler):
         exec(shell)
         print(table)
         self.write(self.data)
-
-
 
         
 if __name__ == "__main__":
